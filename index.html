@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Martinez</title>
+    <meta name="description" content="Software engineer, technical leader, and founder.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.88em' font-size='80' fill='%23a0845c'>m</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans"', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg:           oklch(0.16 0.005 50);
+            --bg-raised:    oklch(0.20 0.007 50);
+            --text:         oklch(0.88 0.008 70);
+            --text-muted:   oklch(0.50 0.006 50);
+            --accent:       oklch(0.62 0.11 55);
+            --accent-light: oklch(0.72 0.11 55);
+            --border:       oklch(0.25 0.006 50);
+        }
+
+        html { background-color: var(--bg); }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        ::selection {
+            background-color: var(--accent);
+            color: oklch(0.12 0 0);
+        }
+
+        .text-muted  { color: var(--text-muted); }
+        .text-accent { color: var(--accent); }
+
+        a:not(.no-hover):hover { color: var(--accent-light); }
+
+        [data-animate] { opacity: 0; }
+
+        /* subtle grain */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 512px 512px;
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans">
+
+    <!-- ── Nav ── -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl"
+         style="background: oklch(0.16 0.005 50 / 0.85); border-bottom: 1px solid var(--border);">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 h-14 flex items-center justify-between">
+            <a href="#" class="text-sm font-medium tracking-wide transition-colors">martiano</a>
+            <div class="flex items-center gap-7 text-sm text-muted">
+                <a href="#about" class="transition-colors hidden sm:block">About</a>
+                <a href="#journey" class="transition-colors hidden sm:block">Journey</a>
+                <a href="#contact" class="transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <!-- ── Hero ── -->
+        <section class="min-h-[100svh] flex items-center pt-14">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8 w-full py-20">
+                <p data-animate class="text-accent text-xs tracking-[0.2em] uppercase font-medium mb-8">
+                    Software Engineer &amp; Founder
+                </p>
+                <h1 data-animate class="text-5xl sm:text-6xl md:text-[5.5rem] font-extralight tracking-tight leading-[1.08]">
+                    Eduardo<br>Martinez
+                </h1>
+                <p data-animate class="mt-8 text-muted text-lg max-w-md leading-relaxed font-light">
+                    Building software since twelve. Leading teams.
+                    Founding companies. From operating systems to AI.
+                </p>
+                <div data-animate class="mt-12 flex items-center gap-5 text-muted">
+                    <a href="https://x.com/martiano" target="_blank" rel="noopener" class="transition-colors" aria-label="X">
+                        <svg viewBox="0 0 24 24" class="w-[18px] h-[18px]" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/themartiano" target="_blank" rel="noopener" class="transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ── About ── -->
+        <section id="about" class="py-24 sm:py-32">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8">
+                <div data-animate class="mb-12">
+                    <div class="w-8 h-px mb-5" style="background: var(--accent);"></div>
+                    <p class="text-xs tracking-[0.2em] uppercase text-accent font-medium">About</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-16 gap-y-8">
+                    <p data-animate class="text-muted leading-[1.85] font-light">
+                        I started programming at twelve, spending countless hours
+                        teaching myself. By fourteen I was working professionally
+                        as a software developer. I completed two years of secondary
+                        school in one, entering
+                        <span class="text-[var(--text)]">42 Lisboa</span> at
+                        seventeen — one of the world's top programming schools,
+                        selecting roughly 600 from over 30,000 applicants.
+                    </p>
+                    <p data-animate class="text-muted leading-[1.85] font-light">
+                        I was the youngest student throughout the entire course and
+                        the first in Portugal to complete it. Accepted through an
+                        intensive 26-day bootcamp, I built projects from scratch
+                        without teachers — from
+                        <span class="text-[var(--text)]">operating systems</span> to
+                        <span class="text-[var(--text)]">3D graphics engines</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ── Journey ── -->
+        <section id="journey" class="py-24 sm:py-32">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8">
+                <div data-animate class="mb-16">
+                    <div class="w-8 h-px mb-5" style="background: var(--accent);"></div>
+                    <p class="text-xs tracking-[0.2em] uppercase text-accent font-medium">Journey</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Carbon -->
+                    <div data-animate class="group grid md:grid-cols-[200px_1fr] gap-3 md:gap-12 p-5 -mx-5 rounded-lg transition-colors duration-300 hover:bg-[var(--bg-raised)]">
+                        <div>
+                            <p class="text-sm font-medium">Carbon</p>
+                            <p class="text-xs text-muted mt-1">Founder</p>
+                        </div>
+                        <p class="text-muted leading-[1.8] font-light text-[0.938rem]">
+                            Founded my own company, handling everything from technical
+                            architecture and product development to recruitment, finances,
+                            client relations, and brand identity.
+                        </p>
+                    </div>
+
+                    <!-- Frank -->
+                    <div data-animate class="group grid md:grid-cols-[200px_1fr] gap-3 md:gap-12 p-5 -mx-5 rounded-lg transition-colors duration-300 hover:bg-[var(--bg-raised)]">
+                        <div>
+                            <p class="text-sm font-medium">Frank</p>
+                            <p class="text-xs text-muted mt-1">First Engineer</p>
+                        </div>
+                        <p class="text-muted leading-[1.8] font-light text-[0.938rem]">
+                            Hired as the first engineer. Designed and built the
+                            company's core AI product, helping grow the team from
+                            one to over fourteen people.
+                        </p>
+                    </div>
+
+                    <!-- Miles in the Sky -->
+                    <div data-animate class="group grid md:grid-cols-[200px_1fr] gap-3 md:gap-12 p-5 -mx-5 rounded-lg transition-colors duration-300 hover:bg-[var(--bg-raised)]">
+                        <div>
+                            <p class="text-sm font-medium">Miles in the Sky</p>
+                            <p class="text-xs text-muted mt-1">Dev → Eng. Manager</p>
+                        </div>
+                        <p class="text-muted leading-[1.8] font-light text-[0.938rem]">
+                            Over three years, promoted from developer to tech lead
+                            to engineering manager — leading teams, hiring and
+                            mentoring developers, and improving project quality
+                            and productivity.
+                        </p>
+                    </div>
+
+                    <!-- 42 -->
+                    <div data-animate class="group grid md:grid-cols-[200px_1fr] gap-3 md:gap-12 p-5 -mx-5 rounded-lg transition-colors duration-300 hover:bg-[var(--bg-raised)]">
+                        <div>
+                            <p class="text-sm font-medium">42 Lisboa</p>
+                            <p class="text-xs text-muted mt-1">First Graduate in PT</p>
+                        </div>
+                        <p class="text-muted leading-[1.8] font-light text-[0.938rem]">
+                            Youngest student admitted to one of the world's best
+                            programming schools. Built everything from operating
+                            systems to 3D engines — from scratch, without teachers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ── Expertise ── -->
+        <section class="py-24 sm:py-32">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8">
+                <div data-animate class="mb-12">
+                    <div class="w-8 h-px mb-5" style="background: var(--accent);"></div>
+                    <p class="text-xs tracking-[0.2em] uppercase text-accent font-medium">Expertise</p>
+                </div>
+
+                <div data-animate class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Full-Stack Development</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Artificial Intelligence</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Cloud Infrastructure</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Systems Programming</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Mobile Development</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Game Development</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">Team Leadership</span>
+                    <span class="px-4 py-2 text-xs text-muted rounded-full transition-colors duration-200 hover:text-[var(--text)]" style="border: 1px solid var(--border);">AWS Certified</span>
+                </div>
+
+                <p data-animate class="mt-8 text-muted text-sm font-light">
+                    Fluent in English and Portuguese. Knowledge of Spanish and Japanese.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ── Contact ── -->
+        <section id="contact" class="py-24 sm:py-32">
+            <div class="max-w-4xl mx-auto px-6 sm:px-8">
+                <div data-animate class="mb-12">
+                    <div class="w-8 h-px mb-5" style="background: var(--accent);"></div>
+                    <p class="text-xs tracking-[0.2em] uppercase text-accent font-medium">Contact</p>
+                </div>
+
+                <h2 data-animate class="text-3xl sm:text-4xl font-extralight tracking-tight leading-tight">
+                    Let's work together.
+                </h2>
+
+                <div data-animate class="mt-10 flex items-center gap-5 text-muted">
+                    <a href="https://x.com/martiano" target="_blank" rel="noopener" class="transition-colors" aria-label="X">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/themartiano" target="_blank" rel="noopener" class="transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ── Footer ── -->
+    <footer class="py-8" style="border-top: 1px solid var(--border);">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 flex justify-between items-center">
+            <p class="text-xs text-muted">&copy; 2026 Eduardo Martinez</p>
+            <p class="text-xs text-muted">martiano.me</p>
+        </div>
+    </footer>
+
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <!-- Motion -->
+    <script type="module">
+        import { animate, stagger, inView } from 'https://cdn.jsdelivr.net/npm/motion@11/+esm';
+
+        // hero — staggered entrance
+        const hero = document.querySelector('section');
+        const heroEls = hero.querySelectorAll('[data-animate]');
+        animate(heroEls,
+            { opacity: [0, 1], y: [28, 0] },
+            { duration: 0.9, delay: stagger(0.13), easing: [0.22, 1, 0.36, 1] }
+        );
+
+        // everything else — reveal on scroll
+        document.querySelectorAll('section:not(:first-of-type) [data-animate]').forEach(el => {
+            inView(el, () => {
+                animate(el,
+                    { opacity: [0, 1], y: [16, 0] },
+                    { duration: 0.65, easing: [0.22, 1, 0.36, 1] }
+                );
+            }, { margin: '-60px' });
+        });
+    </script>
+
+</body>
+</html>
